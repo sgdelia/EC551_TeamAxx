@@ -7,4 +7,7 @@ The keyboard is used to select one of four falling tiles on the VGA display. If 
 Team Axx's final project presentation can be found here:
 https://docs.google.com/presentation/d/1CMNVLya36nCDUyx6dE2xISmVE1MGXeYMHzk-NK7Mrm0/edit?usp=sharing
 
-Powerpoint copy of the final presentation and zipped file of the project video is available in the repo.
+Link to project video:
+https://drive.google.com/file/d/14A1h_nnZHxY8UpmoFgINUpg5czPfsu6f/view?usp=share_link
+
+Powerpoint copy of the final presentation is available in the repo.
