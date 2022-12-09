@@ -20,33 +20,33 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module divby12(numerator, quotient, remainder);
+module split_note_octave(numerator, denominator, remainder);
     input [5:0] numerator;
-    output [2:0] quotient;
+    output [2:0] denominator;
     output [3:0] remainder;
     
-    reg [2:0] quotient;
-    reg [3:0] remain_bit3_bit2;
+    reg [2:0] octave;
+    reg [3:0] note;
     
-    assign remainder = {remain_bit3_bit2, numerator[1:0]};  
+    assign remainder = {note, numerator[1:0]}; 
     
     always @(numerator[5:2]) 
     case(numerator[5:2])
-       0: begin quotient=0; remain_bit3_bit2=0; end
-       1: begin quotient=0; remain_bit3_bit2=1; end
-       2: begin quotient=0; remain_bit3_bit2=2; end
-       3: begin quotient=1; remain_bit3_bit2=0; end
-       4: begin quotient=1; remain_bit3_bit2=1; end
-       5: begin quotient=1; remain_bit3_bit2=2; end
-       6: begin quotient=2; remain_bit3_bit2=0; end
-       7: begin quotient=2; remain_bit3_bit2=1; end
-       8: begin quotient=2; remain_bit3_bit2=2; end
-       9: begin quotient=3; remain_bit3_bit2=0; end
-     10: begin quotient=3; remain_bit3_bit2=1; end
-     11: begin quotient=3; remain_bit3_bit2=2; end
-     12: begin quotient=4; remain_bit3_bit2=0; end
-     13: begin quotient=4; remain_bit3_bit2=1; end
-     14: begin quotient=4; remain_bit3_bit2=2; end
-     15: begin quotient=5; remain_bit3_bit2=0; end
+       0: begin octave=0; note=0; end
+       1: begin octave=0; note=1; end
+       2: begin octave=0; note=2; end
+       3: begin octave=1; note=0; end
+       4: begin octave=1; note=1; end
+       5: begin octave=1; note=2; end
+       6: begin octave=2; note=0; end
+       7: begin octave=2; note=1; end
+       8: begin octave=2; note=2; end
+       9: begin octave=3; note=0; end
+      10: begin octave=3; note=1; end
+      11: begin octave=3; note=2; end
+      12: begin octave=4; note=0; end
+      13: begin octave=4; note=1; end
+      14: begin octave=4; note=2; end
+      15: begin octave=5; note=0; end
     endcase
 endmodule
