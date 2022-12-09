@@ -25,7 +25,7 @@ module music_tune(
 	output reg speaker);
         
     reg [30:0] output_note;
-    always @(posedge clk) output_note <= output_note+31'd1;
+    always @(posedge clk) if (music_enable) output_note <= output_note+31'd1;
     
     // obtains the note information from the ROM
     wire [7:0] fullnote;
